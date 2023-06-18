@@ -46,11 +46,11 @@ public:
 		}
 
 		{
-			Sphere sphere;
-			sphere.center = { 2.0f, 0.0f, 0.0f };
-			sphere.radius = 1.0f;
-			sphere.materialIndex = 2;
-			m_Scene.spheres.push_back(sphere);
+			Sphere* sphere = new Sphere();
+			sphere->center = { 2.0f, 0.0f, 0.0f };
+			sphere->radius = 1.0f;
+			sphere->materialIndex = 2;
+			m_Scene.shapes.push_back(sphere);
 		}
 	}
 	virtual void OnUpdate(float ts) override
